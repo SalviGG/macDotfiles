@@ -84,6 +84,14 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
+  export GOPATH=$HOME/go
+  export GOROOT=/usr/local/go
+  export GOBIN=$GOPATH/bin
+  export PATH=$PATH:$GOPATH/bin
+
+# bindings
+bindkey "\\e" backward-kill-line
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
