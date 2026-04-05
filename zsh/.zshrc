@@ -89,6 +89,8 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   export GOBIN=$GOPATH/bin
   export PATH=$PATH:$GOPATH/bin
 
+  export ASEPRITE_HOME=$HOME/Documents/Aseprite/
+
 # bindings
 bindkey "\\e" backward-kill-line
 
