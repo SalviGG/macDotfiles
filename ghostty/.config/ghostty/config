@@ -1,0 +1,22 @@
+#Window config
+window-theme = ghostty
+window-padding-balance = true
+window-padding-color = background
+window-inherit-working-directory = true
+window-inherit-font-size = true
+background-opacity = 0.8
+
+#Cursor
+cursor-style = bar
+adjust-cursor-thickness = 1
+
+
+
+#Font
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+font-thicken = true
+
+#Theme
+theme = onedarkpro_onedark
+background-opacity = 0.8

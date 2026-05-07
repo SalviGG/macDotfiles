@@ -94,6 +94,20 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # bindings
 bindkey "\\e" backward-kill-line
 
+# workaround for cursor in tmux
+# Reset cursor to bar after exiting any program that might change it
+if [[ -n "$TMUX" ]]; then
+    # For zsh
+    precmd() {
+        printf '\e[6 q'
+    }
+    
+    # Also after any command completes
+    preexec() {
+        printf '\e[6 q'
+    }
+fi
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
