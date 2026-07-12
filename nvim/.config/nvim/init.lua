@@ -78,15 +78,17 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Sets tabs
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
 -- Binds NvimTree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
-
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
@@ -134,6 +136,7 @@ end
 
 vim.keymap.set("n", "<Esc>", function()
 	close_floats()
+	vim.cmd("nohlsearch")
 end, { desc = "Close floats, clear highlights" })
 
 -- [[ Basic Autocommands ]]
